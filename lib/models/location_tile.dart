@@ -24,12 +24,14 @@ class LocationTile extends StatelessWidget {
           children: [
             Text(
               location.name.toUpperCase(),
+              key: Key('location_tile_name_${location.id}'),
               overflow: TextOverflow.ellipsis,
               maxLines: 1,
               style: Theme.of(context)
                   .textTheme
                   .headline6
                   ?.copyWith(color: textColor),
+              // key: Key('location_tile_name_${location.id}')
             ),
             Text(
               location.userItinerarySummary.toUpperCase(),

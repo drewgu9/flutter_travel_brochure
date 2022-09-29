@@ -34,7 +34,8 @@ class Locations extends StatelessWidget {
                 ImageBanner(assetPath: l.imagePath, height: 245.0),
                 TileOverlay(l)
               ],
-            )));
+            )),
+        key: Key('location_list_item_${l.id}'));
   }
 
   _onLocationTap(BuildContext context, int locationID) {
